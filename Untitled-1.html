@@ -1,0 +1,169 @@
+/HTML
+<div id="slider">
+  <figure>
+    "images/hong-kong3.jpg" "images/building1.jpg" "images/buildings2.jpg" "images/buildings4.jpg" "buildings5.jpg" 
+</div>
+
+<div class="accordeon">
+    <div><img src="images/hong-kong3.jpg" alt></div>
+    <div><img src="images/building1.jpg" alt></div>
+    <div><img src="images/buildings2.jpg" alt></div>
+    <div><img src="images/buildings4.jpg" alt></div>
+    <div><img src="images/buildings5.jpg" alt></div>
+</div>
+
+    
+    /* reset */
+
+*{box-sizing:border-box}
+body{margin:0}
+img{max-width:100%;display:block}
+
+/* reset */
+
+
+.accordeon {
+
+margin: 2rem  auto;
+display: flex;
+height: 400px;
+max-width: 600px
+	
+}
+	
+.accordeon div {
+	
+flex-grow: 1;
+transition: flex .5s
+	
+}
+		
+.accordeon div:hover {
+	
+flex-grow:10
+	
+}
+	
+.accordeon div:first-child{
+	
+background:url(images/building1.jpg) no-repeat center center;
+background-size: cover
+	
+	}
+	
+.accordeon div:nth-child(2){
+	
+background:url("images/hong-kong3.jpg") no-repeat center center;
+background-size: cover
+	
+	}
+
+.accordeon div:nth-child(3){
+	
+background:url("images/building1.jpg") no-repeat center center;
+background-size: cover
+		
+	}
+	
+.accordeon div:nth-child(4){
+
+background:url("images/buildings2.jpg") no-repeat center center;
+background-size: cover
+	
+	}
+	
+.accordeon div:last-child{
+	
+background:url("images/buildings4.jpg") no-repeat center center;
+background-size: cover
+	}
+	 
+
+
+
+    /* __  /* ______________________________ Slideshow ________________________________*/
+
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+}
+
+/* Masquer les images par défaut */
+.mySlides {
+  display: none;
+}
+
+/* Boutons précédent et suivant */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Bouton "suivant" à droite */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* fond noir avec transparence au hover */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* La légende */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+/* les points de navigation */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 5px 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Disparition : animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
